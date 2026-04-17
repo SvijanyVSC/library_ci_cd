@@ -48,7 +48,7 @@ jobs:
           php -S 127.0.0.1:8000 -t public &
     
 
-# job : build (environnemt du projet)
+# job : build (environnement du projet)
       - name: installer les dépendances
         run: | 
           DATABASE_HOST=localhost
@@ -61,8 +61,8 @@ jobs:
           UPLOAD_SIZE_MAX=2097152
           UPLOAD_FORMAT_WHITE_LIST=["png","jpg","jpeg","webp"]          
 # compiler le code
-      - name: Run Cypress tests
-        uses: cypress-io/github-action@v6
+      - name: Cypress run
+        uses: cypress-io/github-action@v7
         with:
           build: npm run build
           start: npm run start
