@@ -62,7 +62,7 @@ jobs:
           UPLOAD_FORMAT_WHITE_LIST=["png","jpg","jpeg","webp"]          
 # compiler le code
       - name: Cypress run
-        uses: cypress-io/github-action@v7
+        uses: actions/checkout@v6
         with:
           build: npm run build
           start: npm run start
